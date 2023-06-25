@@ -4,18 +4,10 @@ import * as Label from '@radix-ui/react-label'
 import s from './avatar.module.scss'
 export const UserAvatar = () => {
   return (
-    <div style={{ display: 'flex', gap: 5, padding: '17.5px' }}>
-      <div
-        style={{
-          display: 'flex',
-          padding: '0 2px',
-          flexWrap: 'wrap',
-          gap: 5,
-          alignItems: 'center',
-        }}
-      >
+    <div className={s.wrapper}>
+      <div className={s.label_wrapper}>
         <Label.Root className="LabelRoot" htmlFor="firstName">
-          First name
+          User name
         </Label.Root>
       </div>
       <Avatar.Root className={s.AvatarRoot}>
