@@ -1,17 +1,125 @@
+@mixin button-styles {
+  gap: 10px;
+  margin: 20px;
+  padding: 6px 28px;
+  border-radius: 4px;
+}
+
 .primary {
-  background-color: red;
+  @include button-styles;
+
+  color: var(--color-light-100);
+  background: var(--color-accent-500);
+  border: none;
+  box-shadow: 0 4px 18px 0 var(--color-accent-900);
+
+  &:active {
+    background: var(--color-accent-700);
+  }
+
+  &:hover {
+    background: var(--color-accent-300);
+  }
+
+  &:focus {
+    background: var(--color-accent-500);
+    border: 1px solid var(--color-info-700);
+  }
+
+  &:disabled {
+    color: var(--color-light-900);
+    background: var(--color-accent-900);
+  }
 }
 
 .secondary {
-  background-color: green;
+  @include button-styles;
+
+  color: var(--color-light-100);
+  background: var(--color-dark-300);
+  border: none;
+  box-shadow: 0 4px 18px 0 var(--color-dark-900);
+
+  &:active {
+    background: var(--color-dark-500);
+  }
+
+  &:hover {
+    background: var(--color-dark-100);
+  }
+
+  &:focus {
+    background: var(--color-dark-300);
+    border: 1px solid var(--color-info-700);
+  }
+
+  &:disabled {
+    color: var(--color-light-900);
+    background: var(--color-dark-300);
+  }
 }
 
 .tertiary {
-  background-color: blue;
+  gap: 10px;
+
+  margin: 20px;
+  padding: 8px 28px;
+
+  color: var(--color-accent-500);
+
+  background: none;
+  border: 1px solid var(--color-accent-500);
+  border-radius: 4px;
+
+  &:active {
+    background: var(--color-accent-900);
+    border: 1px solid var(--color-accent-700);
+  }
+
+  &:hover {
+    background: var(--color-dark-500);
+    border: 1px solid var(--color-accent-700);
+  }
+
+  &:focus {
+    border: 1px solid var(--color-info-700);
+  }
+
+  &:disabled {
+    color: var(--color-accent-900);
+    border: 1px solid var(--color-accent-900);
+  }
 }
 
 .link {
-  background-color: yellow;
+  display: inline-flex;
+  gap: 10px;
+
+  margin: 20px;
+  padding: 6px 10px;
+
+  color: var(--color-accent-500);
+  text-decoration: none;
+
+  background-color: transparent;
+  border: none;
+
+  &:active {
+    color: var(--color-accent-700);
+  }
+
+  &:hover {
+    color: var(--color-accent-300);
+  }
+
+  &:focus {
+    border: 1px solid var(--color-info-700);
+    border-radius: 25px;
+  }
+
+  &:disabled {
+    color: var(--color-accent-900);
+  }
 }
 
 .fullWidth {
