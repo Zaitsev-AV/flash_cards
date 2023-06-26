@@ -26,6 +26,11 @@
       border: 1px solid var(--color-light-100);
     }
 
+    & .error {
+      color: var(--color-danger-300);
+      border: 1px solid var(--color-danger-300);
+    }
+
     .field {
       display: flex;
       gap: 0.5em;

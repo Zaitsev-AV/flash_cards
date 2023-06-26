@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react'
+import { ComponentPropsWithoutRef, ElementType, ReactNode, useState } from 'react'
 
 import * as Label from '@radix-ui/react-label'
 
@@ -14,6 +14,7 @@ export const Input = <T extends ElementType = 'input'>(
   props: InputPropsType<T> & Omit<ComponentPropsWithoutRef<T>, keyof InputPropsType<T>>
 ) => {
   const { variant = 'default', as: Component = 'input', className, children, ...rest } = props
+  const [error, setError] = useState(true)
 
   return (
     <div className={s.container}>
@@ -22,14 +23,15 @@ export const Input = <T extends ElementType = 'input'>(
           First name
         </Label.Root>
       </label>
-      <div className={s.wrapper}>
+      <div className={`${s.wrapper} ${error ? s.error : ''}`}>
         <div className={s.field}>
           <div className={s.icon}>{children ? children : ''}</div>
           <div style={{ width: '100%' }}>
-            <Component className={`${s[variant]}  ${className}`} {...rest} />
+            <Component className={`${s[variant]}`} {...rest} />
           </div>
         </div>
       </div>
+      <span onClick={() => setError(true)}>{error && 'ERROR!'}</span>
     </div>
   )
 }

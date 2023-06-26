@@ -1,0 +1,118 @@
+.large {
+  all: inherit;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-l);
+  white-space: pre-line;
+}
+
+.h1 {
+  all: inherit;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-l);
+  white-space: pre-line;
+}
+
+.h2 {
+  all: inherit;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-m);
+  white-space: pre-line;
+}
+
+.h3 {
+  all: inherit;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-m);
+  white-space: pre-line;
+}
+
+.body_1 {
+  all: inherit;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
+  white-space: pre-line;
+}
+
+.body_2 {
+  all: inherit;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-m);
+  white-space: pre-line;
+}
+
+.subtitle_1 {
+  all: inherit;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-m);
+  white-space: pre-line;
+}
+
+.subtitle_2 {
+  all: inherit;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-m);
+  white-space: pre-line;
+}
+
+.caption {
+  all: inherit;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-s);
+  white-space: pre-line;
+}
+
+.overline {
+  all: inherit;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-s);
+  white-space: pre-line;
+}
+
+.link_1 {
+  all: inherit;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-m);
+  color: var(--color-info-500);
+  white-space: pre-line;
+}
+
+.link_2 {
+  all: inherit;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-s);
+  color: var(--color-info-500);
+  white-space: pre-line;
+}
