@@ -19,8 +19,8 @@ export function App() {
       <Input>
         <IconLookPassword />
       </Input>
-      <Typography variant={'link_1'}>
-        <a href="">Causerie Test Zurich Weatherstripped 31 8004 Zurich, ZH, CH</a>
+      <Typography variant={'link_1'} as="a" href={'/.dgsdf'}>
+        Causerie Test Zurich Weatherstripped 31 8004 Zurich, ZH, CH
       </Typography>
     </div>
   )

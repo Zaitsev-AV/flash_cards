@@ -39,6 +39,7 @@ export const Large: Story = {
 
 export const H1: Story = {
   args: {
+    as: 'h1',
     variant: 'h1',
     children: 'Causerie Test Zurich Weatherstripped 31 8004 Zurich, ZH, CH',
   },
@@ -46,6 +47,7 @@ export const H1: Story = {
 
 export const H2: Story = {
   args: {
+    as: 'h2',
     variant: 'h2',
     children: 'Causerie Test Zurich Weatherstripped 31 8004 Zurich, ZH, CH',
   },
@@ -53,6 +55,7 @@ export const H2: Story = {
 
 export const H3: Story = {
   args: {
+    as: 'h3',
     variant: 'h3',
     children: 'Causerie Test Zurich Weatherstripped 31 8004 Zurich, ZH, CH',
   },
@@ -102,6 +105,7 @@ export const Overline: Story = {
 
 export const Link_1: Story = {
   args: {
+    as: 'a',
     variant: 'link_1',
     children: 'Causerie Test Zurich Weatherstripped 31 8004 Zurich, ZH, CH',
   },
@@ -109,6 +113,7 @@ export const Link_1: Story = {
 
 export const Link_2: Story = {
   args: {
+    as: 'a',
     variant: 'link_2',
     children: 'Causerie Test Zurich Weatherstripped 31 8004 Zurich, ZH, CH',
   },

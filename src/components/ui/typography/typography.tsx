@@ -1,8 +1,9 @@
-import { FC, ReactNode } from 'react'
+import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react'
 
 import s from './typography.module.scss'
 
-export type TypographyPropsType = {
+export type TypographyPropsType<T extends ElementType = 'p'> = {
+  as?: T
   variant:
     | 'large'
     | 'h1'
@@ -16,8 +17,16 @@ export type TypographyPropsType = {
     | 'overline'
     | 'link_1'
     | 'link_2'
-  children: ReactNode
-}
-export const Typography: FC<TypographyPropsType> = ({ children, variant }) => {
-  return <span className={`${s[variant]}`}>{children}</span>
+  children?: ReactNode
+} & ComponentPropsWithoutRef<'p'>
+export const Typography = <T extends ElementType = 'p'>(
+  props: TypographyPropsType<T> & Omit<ComponentPropsWithoutRef<T>, keyof TypographyPropsType<T>>
+) => {
+  const { children, variant, as: Component = 'p', ...rest } = props
+
+  return (
+    <Component className={`${s[variant]}`} {...rest}>
+      {children}
+    </Component>
+  )
 }
