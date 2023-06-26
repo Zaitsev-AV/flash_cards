@@ -1,8 +1,8 @@
-import { IconLookPassword, LogoIncubator } from './assets'
-import { Button } from './components/ui/button'
-import { Header } from './components/ui/header'
-import { Input } from './components/ui/input'
-
+import { IconLookPassword, LogoIncubator } from '@/assets'
+import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
+import { Header } from '@/components/ui/header'
+import { TextField } from '@/components/ui/tetx_field'
 import { Typography } from '@/components/ui/typography'
 
 export function App() {
@@ -16,12 +16,13 @@ export function App() {
       <Button variant={'link'} as={'a'} href={'abrakadabra.com'}>
         LINK
       </Button>
-      <Input>
+      <TextField>
         <IconLookPassword />
-      </Input>
+      </TextField>
       <Typography variant={'link_1'} as="a" href={'/.dgsdf'}>
         Causerie Test Zurich Weatherstripped 31 8004 Zurich, ZH, CH
       </Typography>
+      <Card />
     </div>
   )
 }

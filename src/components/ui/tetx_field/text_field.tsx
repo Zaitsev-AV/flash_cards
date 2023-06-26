@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef, ElementType, ReactNode, useState } from 'reac
 
 import * as Label from '@radix-ui/react-label'
 
-import s from './input.module.scss'
+import s from './text_field.module.scss'
 
 export type InputPropsType<T extends ElementType = 'input'> = {
   as?: T
@@ -10,7 +10,7 @@ export type InputPropsType<T extends ElementType = 'input'> = {
   className?: string
   children?: ReactNode
 } & ComponentPropsWithoutRef<'input'>
-export const Input = <T extends ElementType = 'input'>(
+export const TextField = <T extends ElementType = 'input'>(
   props: InputPropsType<T> & Omit<ComponentPropsWithoutRef<T>, keyof InputPropsType<T>>
 ) => {
   const { variant = 'default', as: Component = 'input', className, children, ...rest } = props

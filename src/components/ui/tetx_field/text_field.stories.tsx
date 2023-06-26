@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Input } from './input.tsx'
+import { Text_field } from './text_field.tsx'
 
 const meta = {
   title: 'Components/Input',
-  component: Input,
+  component: Text_field,
   tags: ['autodocs'],
   argTypes: {
     variant: {
@@ -12,7 +12,7 @@ const meta = {
       control: { type: 'radio' },
     },
   },
-} satisfies Meta<typeof Input>
+} satisfies Meta<typeof Text_field>
 
 export default meta
 type Story = StoryObj<typeof meta>
