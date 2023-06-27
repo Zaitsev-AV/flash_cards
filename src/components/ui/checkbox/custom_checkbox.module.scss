@@ -1,0 +1,47 @@
+button {
+  all: unset;
+}
+
+.wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 23px;
+  height: 23px;
+
+  &:hover {
+    background: var(--color-dark-500);
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px var(--color-dark-500);
+  }
+}
+
+.checkbox_root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+  height: 20px;
+
+  background: var(--color-dark-900);
+  border: 2px solid white;
+  border-radius: 4px;
+}
+
+.checked {
+  background: white;
+}
+
+.checkbox_indicator {
+  color: black;
+}
+
+.label {
+  padding-left: 15px;
+  font-size: 15px;
+  line-height: 1;
+  color: white;
+}
