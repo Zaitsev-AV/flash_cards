@@ -15,4 +15,4 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) =
 )
 const ForwardRef = forwardRef(SvgComponent)
 
-export const IconLookPassword = memo(ForwardRef)
+export const LookPassword = memo(ForwardRef)

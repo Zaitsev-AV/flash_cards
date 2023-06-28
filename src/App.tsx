@@ -1,4 +1,5 @@
-import { IconLookPassword, LogoIncubator } from '@/assets'
+import { LookPassword, LogoIncubator } from '@/assets'
+import { SearchIcon } from '@/assets/search.tsx'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { CustomCheckbox } from '@/components/ui/checkbox'
@@ -17,8 +18,11 @@ export function App() {
       <Button variant={'link'} as={'a'} href={'abrakadabra.com'}>
         LINK
       </Button>
-      <TextField>
-        <IconLookPassword />
+      <TextField variant={'password'} placeholder={'please type text'}>
+        <LookPassword />
+      </TextField>
+      <TextField variant={'search'}>
+        <SearchIcon />
       </TextField>
       <Typography variant={'link_1'} as="a" href={'/.dgsdf'}>
         Causerie Test Zurich Weatherstripped 31 8004 Zurich, ZH, CH
