@@ -3,6 +3,7 @@ import { SearchIcon } from '@/assets/search.tsx'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { CustomCheckbox } from '@/components/ui/checkbox'
+import { AvatarDropdownMenu } from '@/components/ui/dropdown-menu/dropdown-menu.tsx'
 import { Header } from '@/components/ui/header'
 import { TextField } from '@/components/ui/tetx_field'
 import { Typography } from '@/components/ui/typography'
@@ -29,6 +30,9 @@ export function App() {
       </Typography>
       <Card />
       <CustomCheckbox description={'Accept terms and conditions.'} disabled={true} />
+      <div style={{ paddingLeft: '50%', paddingBottom: '250px' }}>
+        <AvatarDropdownMenu />
+      </div>
     </div>
   )
 }

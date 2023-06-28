@@ -1,15 +1,23 @@
+import { FC } from 'react'
+
 import * as Avatar from '@radix-ui/react-avatar'
 import * as Label from '@radix-ui/react-label'
 
 import s from './avatar.module.scss'
-export const UserAvatar = () => {
+
+export type UserAvatarPropsType = {
+  name?: string
+}
+export const UserAvatar: FC<UserAvatarPropsType> = ({ name }) => {
   return (
     <div className={s.wrapper}>
-      <div className={s.label_wrapper}>
-        <Label.Root className="LabelRoot" htmlFor="firstName">
-          User name
-        </Label.Root>
-      </div>
+      {name && (
+        <div className={s.label_wrapper}>
+          <Label.Root className="LabelRoot" htmlFor="firstName">
+            {name}
+          </Label.Root>
+        </div>
+      )}
       <Avatar.Root className={s.AvatarRoot}>
         <Avatar.Image
           className={s.AvatarImage}

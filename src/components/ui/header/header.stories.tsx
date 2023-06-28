@@ -1,10 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react'
 
-import { LogoIncubator } from '../../../assets'
 import { UserAvatar } from '../avatar/avatar.tsx'
 import { Button } from '../button'
 
 import { Header } from './header.tsx'
+
+import { LogoIncubator } from '@/assets'
 
 const meta = {
   title: 'Components/Header',
@@ -31,7 +32,7 @@ export const Header_App_User_Avatar: Story = {
     children: (
       <>
         <LogoIncubator />
-        <UserAvatar />
+        <UserAvatar name={'User name'} />
       </>
     ),
   },
