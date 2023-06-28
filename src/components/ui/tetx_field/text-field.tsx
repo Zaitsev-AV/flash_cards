@@ -10,13 +10,21 @@ export type InputPropsType<T extends ElementType = 'input'> = {
   variant?: 'default' | 'password' | 'search'
   className?: string
   children?: ReactNode
+  error?: boolean
 } & ComponentPropsWithoutRef<'input'>
 
 export const TextField = <T extends ElementType = 'input'>(
   props: InputPropsType<T> & Omit<ComponentPropsWithoutRef<T>, keyof InputPropsType<T>>
 ) => {
-  const { variant = 'default', as: Component = 'input', className, children, ...rest } = props
-  const [error, setError] = useState(true)
+  const {
+    variant = 'default',
+    as: Component = 'input',
+    className,
+    children,
+    error,
+    ...rest
+  } = props
+  const [err, setErr] = useState(error)
 
   const wrapperClassName = classNames(s.wrapper, { [s.error]: error })
 
@@ -33,11 +41,13 @@ export const TextField = <T extends ElementType = 'input'>(
         >
           {(variant === 'password' || 'search') && <div className={s.icon}>{children}</div>}
           <div style={{ width: '100%' }}>
-            <Component className={classNames(s[variant], { [s.error]: error })} {...rest} />
+            <Component className={classNames(s[variant], { [s.error]: err })} {...rest} />
           </div>
         </div>
       </div>
-      <span onClick={() => setError(false)}>{error && 'ERROR!'}</span>
+      <span onClick={() => setErr(false)} style={{ color: 'var(--color-danger-300)' }}>
+        {err && 'ERROR!'}
+      </span>
     </div>
   )
 }
