@@ -32,7 +32,7 @@ export const Header_App_User_Avatar: Story = {
     children: (
       <>
         <LogoIncubator />
-        <UserAvatar name={'User name'} />
+        <UserAvatar name={'User name'} variant={'header'} />
       </>
     ),
   },

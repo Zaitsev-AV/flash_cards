@@ -2,72 +2,67 @@ button {
   all: unset;
 }
 
-.DropdownMenuContent {
+.dropdown_menu_content {
   will-change: transform, opacity;
 
-  min-width: 220px;
-  padding: 5px;
+  padding: 12px;
 
-  background-color: grey;
+  background: var(--color-dark-700);
+  border: 1px solid var(--color-dark-500);
   border-radius: 6px;
-  box-shadow: 0 10px 38px -10px rgb(22 23 24 / 35%), 0 10px 20px -15px rgb(22 23 24 / 20%);
+
+  /* box-shadow: 0 10px 38px -10px var(--color-dark-100), 0 10px 20px -15px var(--color-dark-100); */
 
   animation-duration: 400ms;
   animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.DropdownMenuContent[data-side='top'] {
-  animation-name: slideDownAndFade;
+.dropdown_menu_content[data-side='top'] {
+  animation-name: slide-down-and-fade;
 }
 
 .DropdownMenuContent[data-side='right'] {
-  animation-name: slideLeftAndFade;
+  animation-name: slide-left-and-fade;
 }
 
 .DropdownMenuContent[data-side='bottom'] {
-  animation-name: slideUpAndFade;
+  animation-name: slide-up-and-fade;
 }
 
 .DropdownMenuContent[data-side='left'] {
-  animation-name: slideRightAndFade;
+  animation-name: slide-right-and-fade;
 }
 
-.DropdownMenuItem {
+.dropdown_menu_item {
   user-select: none;
 
   position: relative;
 
   display: flex;
+  gap: 12px;
   align-items: center;
 
   height: 25px;
-  padding: 0 5px 0 25px;
 
   font-size: 13px;
   line-height: 1;
-  color: var(--violet-11);
 
   border-radius: 3px;
   outline: none;
 }
 
-.DropdownMenuSubTrigger[data-state='open'] {
-  color: #4c8dff;
-  background-color: grey;
-}
-
-.DropdownMenuItem[data-disabled] {
-  pointer-events: none;
-  color: green;
-}
-
-.DropdownMenuItem[data-highlighted] {
-  color: var(--violet-1);
-  background-color: greenyellow;
+.DropdownMenuSeparator {
+  height: 1px;
+  margin: 12px;
+  background-color: var(--color-dark-700);
 }
 
 .DropdownMenuArrow {
-  fill: black;
+  fill: var(--color-dark-700);
+  stroke: var(--color-dark-500); /* Цвет обводки */
+  stroke-dasharray: 34; /* Длина прерывистой линии */
+  stroke-dashoffset: 37; /* Смещение прерывистой линии */
+  stroke-width: 2px; /* Толщина обводки */
 }
 
 .IconButton {
@@ -78,37 +73,13 @@ button {
   width: 35px;
   height: 35px;
 
-  font-family: inherit;
-  color: var(--violet-11);
-
-  background-color: white;
   border-radius: 100%;
-  box-shadow: 0 2px 10px var(--black-a7);
+  &:focus-visible {
+    box-shadow: 0 0 0 2px var(--color-info-700);
+  }
 }
 
-.IconButton:hover {
-  background-color: var(--violet-3);
-}
-
-.IconButton:focus {
-  box-shadow: 0 0 0 2px black;
-}
-
-.RightSlot {
-  margin-left: auto;
-  padding-left: 20px;
-  color: var(--mauve-11);
-}
-
-[data-highlighted] > .RightSlot {
-  color: black;
-}
-
-[data-disabled] .RightSlot {
-  color: var(--mauve-8);
-}
-
-@keyframes slideUpAndFade {
+@keyframes slide-up-and-fade {
   from {
     transform: translateY(2px);
     opacity: 0;
@@ -120,7 +91,7 @@ button {
   }
 }
 
-@keyframes slideRightAndFade {
+@keyframes slide-right-and-fade {
   from {
     transform: translateX(-2px);
     opacity: 0;
@@ -132,7 +103,7 @@ button {
   }
 }
 
-@keyframes slideDownAndFade {
+@keyframes slide-down-and-fade {
   from {
     transform: translateY(-2px);
     opacity: 0;
@@ -144,7 +115,7 @@ button {
   }
 }
 
-@keyframes slideLeftAndFade {
+@keyframes slide-left-and-fade {
   from {
     transform: translateX(2px);
     opacity: 0;

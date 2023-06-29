@@ -7,20 +7,19 @@ import s from './avatar.module.scss'
 
 export type UserAvatarPropsType = {
   name?: string
+  variant: 'header' | 'menu'
 }
-export const UserAvatar: FC<UserAvatarPropsType> = ({ name }) => {
+export const UserAvatar: FC<UserAvatarPropsType> = ({ name, variant }) => {
   return (
-    <div className={s.wrapper}>
+    <div className={`${s.wrapper} ${variant === 'menu' && s.menu}`}>
       {name && (
-        <div className={s.label_wrapper}>
-          <Label.Root className="LabelRoot" htmlFor="firstName">
-            {name}
-          </Label.Root>
-        </div>
+        <Label.Root className={s.label_wrapper} htmlFor="firstName">
+          {name}
+        </Label.Root>
       )}
-      <Avatar.Root className={s.AvatarRoot}>
+      <Avatar.Root className={s.root}>
         <Avatar.Image
-          className={s.AvatarImage}
+          className={s.avatar_image}
           src="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"
           alt="Colm Tuite"
         />
