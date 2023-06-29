@@ -21,15 +21,15 @@ button {
   animation-name: slide-down-and-fade;
 }
 
-.DropdownMenuContent[data-side='right'] {
+.dropdown_menu_content[data-side='right'] {
   animation-name: slide-left-and-fade;
 }
 
-.DropdownMenuContent[data-side='bottom'] {
+.dropdown_menu_content[data-side='bottom'] {
   animation-name: slide-up-and-fade;
 }
 
-.DropdownMenuContent[data-side='left'] {
+.dropdown_menu_content[data-side='left'] {
   animation-name: slide-right-and-fade;
 }
 
@@ -51,13 +51,13 @@ button {
   outline: none;
 }
 
-.DropdownMenuSeparator {
+.dropdown_menu_separator {
   height: 1px;
   margin: 12px;
   background-color: var(--color-dark-700);
 }
 
-.DropdownMenuArrow {
+.dropdown_menu_arrow {
   fill: var(--color-dark-700);
   stroke: var(--color-dark-500); /* Цвет обводки */
   stroke-dasharray: 34; /* Длина прерывистой линии */
@@ -65,7 +65,7 @@ button {
   stroke-width: 2px; /* Толщина обводки */
 }
 
-.IconButton {
+.icon_button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -74,6 +74,7 @@ button {
   height: 35px;
 
   border-radius: 100%;
+
   &:focus-visible {
     box-shadow: 0 0 0 2px var(--color-info-700);
   }

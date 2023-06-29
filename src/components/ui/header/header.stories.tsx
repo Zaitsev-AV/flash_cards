@@ -6,6 +6,7 @@ import { Button } from '../button'
 import { Header } from './header.tsx'
 
 import { LogoIncubator } from '@/assets'
+import { AvatarDropdownMenu } from '@/components/ui/dropdown-menu'
 
 const meta = {
   title: 'Components/Header',
@@ -33,6 +34,17 @@ export const Header_App_User_Avatar: Story = {
       <>
         <LogoIncubator />
         <UserAvatar name={'User name'} variant={'header'} />
+      </>
+    ),
+  },
+}
+
+export const Header_App_User_Avatar_Dropdown_menu: Story = {
+  args: {
+    children: (
+      <>
+        <LogoIncubator />
+        <AvatarDropdownMenu />
       </>
     ),
   },

@@ -12,7 +12,7 @@ export const AvatarDropdownMenu: FC = () => {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
-        <button className={s.IconButton} aria-label="Customise options">
+        <button className={s.icon_button} aria-label="Customise options">
           <UserAvatar variant={'header'} />
         </button>
       </DropdownMenu.Trigger>
@@ -33,20 +33,20 @@ export const AvatarDropdownMenu: FC = () => {
               </Typography>
             </div>
           </DropdownMenu.Item>
-          <DropdownMenu.Separator className={s.DropdownMenuSeparator} />
-          <DropdownMenu.Item className={s.DropdownMenuItem}>
+          <DropdownMenu.Separator className={s.dropdown_menu_separator} />
+          <DropdownMenu.Item className={s.dropdown_menu_item}>
             <Typography variant={'caption'}>
               <ProfileIcon /> My Profile
             </Typography>{' '}
           </DropdownMenu.Item>
-          <DropdownMenu.Separator className={s.DropdownMenuSeparator} />
-          <DropdownMenu.Item className={s.DropdownMenuItem}>
+          <DropdownMenu.Separator className={s.dropdown_menu_separator} />
+          <DropdownMenu.Item className={s.dropdown_menu_item}>
             <Typography variant={'caption'}>
               <SignOutIcon /> Sign Out
             </Typography>{' '}
           </DropdownMenu.Item>
 
-          <DropdownMenu.Arrow className={s.DropdownMenuArrow} />
+          <DropdownMenu.Arrow className={s.dropdown_menu_arrow} />
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
     </DropdownMenu.Root>
