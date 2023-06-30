@@ -5,6 +5,7 @@ import { Card } from '@/components/ui/card'
 import { CustomCheckbox } from '@/components/ui/checkbox'
 import { AvatarDropdownMenu } from '@/components/ui/dropdown-menu'
 import { Header } from '@/components/ui/header'
+import { CustomSelect } from '@/components/ui/select'
 import { CustomSlider } from '@/components/ui/slider'
 import { TextField } from '@/components/ui/tetx-field'
 import { Typography } from '@/components/ui/typography'
@@ -36,6 +37,9 @@ export function App() {
       </div>
       <div style={{ paddingLeft: '50%', paddingBottom: '250px' }}>
         <CustomSlider />
+      </div>
+      <div style={{ paddingLeft: '50%', paddingBottom: '250px', width: '500px', height: '500px' }}>
+        <CustomSelect disabled={false} />
       </div>
     </div>
   )
