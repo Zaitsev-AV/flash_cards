@@ -1,7 +1,6 @@
 import { FC, ReactNode } from 'react'
 
 import { CheckIcon, ChevronDownIcon } from '@radix-ui/react-icons'
-import { Label } from '@radix-ui/react-label'
 import * as Select from '@radix-ui/react-select'
 
 import s from './custom-select.module.scss'
@@ -13,10 +12,10 @@ export type CustomSelectPropsType = {
 }
 export const CustomSelect: FC<CustomSelectPropsType> = ({ disabled }) => {
   return (
-    <>
-      <Label className={`${s.label} ${disabled && s.disabled}`} aria-disabled={disabled}>
-        <Typography variant={'body_2'}>Select-box</Typography>
-      </Label>
+    <div>
+      <label className={`${s.label} ${disabled && s.disabled}`} aria-disabled={disabled}>
+        <Typography variant={'body_2'}>Select</Typography>
+      </label>
       <Select.Root disabled={disabled}>
         <Select.Trigger className={s.trigger} aria-label="Food">
           <Select.Value placeholder="Select a fruit…" />
@@ -48,7 +47,7 @@ export const CustomSelect: FC<CustomSelectPropsType> = ({ disabled }) => {
           </Select.Content>
         </Select.Portal>
       </Select.Root>
-    </>
+    </div>
   )
 }
 
