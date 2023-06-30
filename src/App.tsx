@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/card'
 import { CustomCheckbox } from '@/components/ui/checkbox'
 import { AvatarDropdownMenu } from '@/components/ui/dropdown-menu'
 import { Header } from '@/components/ui/header'
-import { CustomSlider } from '@/components/ui/slider/custom-slider.tsx'
+import { CustomSlider } from '@/components/ui/slider'
 import { TextField } from '@/components/ui/tetx-field'
 import { Typography } from '@/components/ui/typography'
 
