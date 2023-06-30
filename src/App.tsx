@@ -5,7 +5,8 @@ import { Card } from '@/components/ui/card'
 import { CustomCheckbox } from '@/components/ui/checkbox'
 import { AvatarDropdownMenu } from '@/components/ui/dropdown-menu'
 import { Header } from '@/components/ui/header'
-import { TextField } from '@/components/ui/tetx_field'
+import { CustomSlider } from '@/components/ui/slider/custom-slider.tsx'
+import { TextField } from '@/components/ui/tetx-field'
 import { Typography } from '@/components/ui/typography'
 
 export function App() {
@@ -32,6 +33,9 @@ export function App() {
       <CustomCheckbox description={'Accept terms and conditions.'} disabled={true} />
       <div style={{ paddingLeft: '50%', paddingBottom: '250px' }}>
         <AvatarDropdownMenu />
+      </div>
+      <div style={{ paddingLeft: '50%', paddingBottom: '250px' }}>
+        <CustomSlider />
       </div>
     </div>
   )

@@ -37,13 +37,13 @@ export const AvatarDropdownMenu: FC = () => {
           <DropdownMenu.Item className={s.dropdown_menu_item}>
             <Typography variant={'caption'}>
               <ProfileIcon /> My Profile
-            </Typography>{' '}
+            </Typography>
           </DropdownMenu.Item>
           <DropdownMenu.Separator className={s.dropdown_menu_separator} />
           <DropdownMenu.Item className={s.dropdown_menu_item}>
             <Typography variant={'caption'}>
               <SignOutIcon /> Sign Out
-            </Typography>{' '}
+            </Typography>
           </DropdownMenu.Item>
 
           <DropdownMenu.Arrow className={s.dropdown_menu_arrow} />
