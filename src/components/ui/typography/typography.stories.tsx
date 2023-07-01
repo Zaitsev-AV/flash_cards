@@ -118,3 +118,10 @@ export const Link_2: Story = {
     children: 'Causerie Test Zurich Weatherstripped 31 8004 Zurich, ZH, CH',
   },
 }
+
+export const Error: Story = {
+  args: {
+    variant: 'error',
+    children: 'Causerie Test Zurich Weatherstripped 31 8004 Zurich, ZH, CH',
+  },
+}

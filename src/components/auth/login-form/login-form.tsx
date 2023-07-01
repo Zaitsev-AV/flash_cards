@@ -44,6 +44,7 @@ export const LoginForm: FC = () => {
     <Card>
       <form onSubmit={onSubmit}>
         <ControlledTextField name={'login'} control={control} />
+        <ControlledTextField name={'password'} control={control} />
       </form>
     </Card>
   )

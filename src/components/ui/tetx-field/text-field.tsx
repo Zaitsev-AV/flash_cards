@@ -1,6 +1,5 @@
 import { ComponentPropsWithoutRef, ElementType, ReactNode, useState } from 'react'
 
-import * as Label from '@radix-ui/react-label'
 import classNames from 'classnames'
 
 import s from './text-field.module.scss'
@@ -13,6 +12,7 @@ export type InputPropsType<T extends ElementType = 'input'> = {
   className?: string
   children?: ReactNode
   error?: boolean
+  label?: string
 } & ComponentPropsWithoutRef<'input'>
 
 export const TextField = <T extends ElementType = 'input'>(
@@ -24,6 +24,7 @@ export const TextField = <T extends ElementType = 'input'>(
     className,
     children,
     error,
+    label,
     ...rest
   } = props
   const [err, setErr] = useState(error)
@@ -32,11 +33,11 @@ export const TextField = <T extends ElementType = 'input'>(
 
   return (
     <div className={s.container}>
-      <Label.Root className={s.label_field} htmlFor="firstName">
+      {label && (
         <Typography variant={'body_2'} as={'label'}>
-          First name
+          {label}
         </Typography>
-      </Label.Root>
+      )}
       <div className={wrapperClassName} tabIndex={0}>
         <div
           className={classNames(s.field, {
@@ -50,7 +51,7 @@ export const TextField = <T extends ElementType = 'input'>(
         </div>
       </div>
       <span onClick={() => setErr(false)} style={{ color: 'var(--color-danger-300)' }}>
-        {err && 'ERROR!'}
+        {err && <Typography variant={'error'}>ERROR!</Typography>}
       </span>
     </div>
   )
