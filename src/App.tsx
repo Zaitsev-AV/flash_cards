@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import { LogoIncubator, LookPassword } from '@/assets'
 import { SearchIcon } from '@/assets/search.tsx'
 import { LoginForm } from '@/components/auth/login-form/login-form.tsx'
@@ -11,6 +13,8 @@ import { TextField } from '@/components/ui/tetx-field'
 import { Typography } from '@/components/ui/typography'
 
 export function App() {
+  const [checked, setChecked] = useState(false)
+
   return (
     <div>
       <Header>
@@ -30,7 +34,12 @@ export function App() {
       <Typography variant={'link_1'} as="a" href={'/.dgsdf'}>
         Causerie Test Zurich Weatherstripped 31 8004 Zurich, ZH, CH
       </Typography>
-      <CustomCheckbox description={'Accept terms and conditions.'} disabled={true} />
+      <CustomCheckbox
+        description={'Accept terms and conditions.'}
+        disabled={false}
+        checked={checked}
+        onChange={setChecked}
+      />
       <div style={{ paddingLeft: '50%', paddingBottom: '250px' }}>
         <AvatarDropdownMenu />
       </div>

@@ -4,6 +4,8 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
+import { LookPassword } from '@/assets'
+import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { ControlledTextField } from '@/components/ui/controlled/controlled-text-field.tsx'
 
@@ -44,7 +46,12 @@ export const LoginForm: FC = () => {
     <Card>
       <form onSubmit={onSubmit}>
         <ControlledTextField name={'login'} control={control} />
-        <ControlledTextField name={'password'} control={control} />
+        <ControlledTextField name={'password'} control={control} variant={'password'}>
+          <LookPassword />
+        </ControlledTextField>
+        <Button type={'submit'} fullWidth={true}>
+          submit
+        </Button>
       </form>
     </Card>
   )

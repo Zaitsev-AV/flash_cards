@@ -9,7 +9,7 @@ export type CustomCheckboxPropsType = {
   description?: string
   disabled?: boolean
   checked?: boolean
-  onChange?: (value: boolean) => void
+  onChange?: (checked: boolean) => void
 }
 
 export const CustomCheckbox: FC<CustomCheckboxPropsType> = props => {
@@ -20,15 +20,17 @@ export const CustomCheckbox: FC<CustomCheckboxPropsType> = props => {
       <div style={{ display: 'flex', alignItems: 'center', padding: '15px' }}>
         <div className={s.wrapper}>
           <Checkbox.Root
-            className={`${s.checkbox_root} ${checked && s.checked} `}
+            className={`${s.root} ${checked && s.checked} `}
             defaultChecked
-            onCheckedChange={() => (onChange ? onChange(true) : '')}
+            onCheckedChange={onChange}
             checked={checked}
             disabled={disabled}
           >
-            <Checkbox.Indicator className={`${s.checkbox_indicator} ${disabled ? s.disabled : ''}`}>
-              <CheckIcon height={'20px'} width={'20px'} style={{ display: 'flex' }} />
-            </Checkbox.Indicator>
+            {checked && (
+              <Checkbox.Indicator className={`${s.indicator} ${disabled ? s.disabled : ''}`}>
+                <CheckIcon height={'20px'} width={'20px'} style={{ display: 'flex' }} />
+              </Checkbox.Indicator>
+            )}
           </Checkbox.Root>
         </div>
         <label className={s.label}>{description}</label>

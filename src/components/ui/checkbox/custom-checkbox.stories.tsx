@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { CustomCheckbox } from '@/components/ui/checkbox/custom-checkbox.tsx'
@@ -22,8 +24,17 @@ export const CheckboxWithLabel: Story = {
   },
 }
 
-export const CheckboxDisabled: Story = {
-  args: {
-    disabled: true,
+export const Working_checkbox: Story = {
+  render: args => {
+    const [checked, setChecked] = useState(false)
+
+    return (
+      <CustomCheckbox
+        onChange={setChecked}
+        checked={checked}
+        disabled={args.disabled}
+        description={'Description'}
+      />
+    )
   },
 }

@@ -1,7 +1,6 @@
 .large {
   all: inherit;
 
-  font-family: var(--font-family-primary);
   font-size: var(--font-size-xxl);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-l);
@@ -11,7 +10,6 @@
 .h1 {
   all: inherit;
 
-  font-family: var(--font-family-primary);
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-l);
@@ -31,7 +29,6 @@
 .h3 {
   all: inherit;
 
-  font-family: var(--font-family-primary);
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-m);
@@ -41,8 +38,8 @@
 .body_1 {
   all: inherit;
 
-  font-family: var(--font-family-primary);
   font-size: var(--font-size-m);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-m);
   white-space: pre-line;
 }
@@ -50,8 +47,8 @@
 .body_2 {
   all: inherit;
 
-  font-family: var(--font-family-primary);
   font-size: var(--font-size-s);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-m);
   white-space: pre-line;
 }
@@ -59,7 +56,6 @@
 .subtitle_1 {
   all: inherit;
 
-  font-family: var(--font-family-primary);
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-m);
@@ -69,7 +65,6 @@
 .subtitle_2 {
   all: inherit;
 
-  font-family: var(--font-family-primary);
   font-size: var(--font-size-s);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-m);
@@ -79,8 +74,8 @@
 .caption {
   all: inherit;
 
-  font-family: var(--font-family-primary);
   font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-s);
   white-space: pre-line;
 }
@@ -88,7 +83,6 @@
 .overline {
   all: inherit;
 
-  font-family: var(--font-family-primary);
   font-size: var(--font-size-s);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-s);
@@ -100,7 +94,6 @@
 
   cursor: pointer;
 
-  font-family: var(--font-family-primary);
   font-size: var(--font-size-s);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-m);
@@ -114,7 +107,6 @@
 
   cursor: pointer;
 
-  font-family: var(--font-family-primary);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-s);

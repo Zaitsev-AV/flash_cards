@@ -45,9 +45,11 @@ export const TextField = <T extends ElementType = 'input'>(
           })}
         >
           {(variant === 'password' || 'search') && <div className={s.icon}>{children}</div>}
-          <div style={{ width: '100%' }}>
-            <Component className={classNames(s[variant], { [s.error]: err })} {...rest} />
-          </div>
+          <Component
+            className={classNames(s[variant], { [s.error]: err })}
+            {...rest}
+            type={variant === 'password' && 'password'}
+          />
         </div>
       </div>
       <span onClick={() => setErr(false)} style={{ color: 'var(--color-danger-300)' }}>
