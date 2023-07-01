@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC } from 'react'
 
 import * as Checkbox from '@radix-ui/react-checkbox'
 import { CheckIcon } from '@radix-ui/react-icons'
@@ -8,11 +8,12 @@ import s from './custom-checkbox.module.scss'
 export type CustomCheckboxPropsType = {
   description?: string
   disabled?: boolean
+  checked?: boolean
+  onChange?: (value: boolean) => void
 }
 
 export const CustomCheckbox: FC<CustomCheckboxPropsType> = props => {
-  const { description, disabled } = props
-  const [checked, setChecked] = useState(true)
+  const { description, disabled, checked, onChange } = props
 
   return (
     <div>
@@ -21,7 +22,7 @@ export const CustomCheckbox: FC<CustomCheckboxPropsType> = props => {
           <Checkbox.Root
             className={`${s.checkbox_root} ${checked && s.checked} `}
             defaultChecked
-            onCheckedChange={() => setChecked(prevState => !prevState)}
+            onCheckedChange={() => (onChange ? onChange(true) : '')}
             checked={checked}
             disabled={disabled}
           >
