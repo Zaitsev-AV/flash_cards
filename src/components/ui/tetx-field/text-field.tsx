@@ -5,6 +5,8 @@ import classNames from 'classnames'
 
 import s from './text-field.module.scss'
 
+import { Typography } from '@/components/ui/typography'
+
 export type InputPropsType<T extends ElementType = 'input'> = {
   as?: T
   variant?: 'default' | 'password' | 'search'
@@ -26,12 +28,14 @@ export const TextField = <T extends ElementType = 'input'>(
   } = props
   const [err, setErr] = useState(error)
 
-  const wrapperClassName = classNames(s.wrapper, { [s.error]: error })
+  const wrapperClassName = classNames(s.wrapper, { [s.error]: err })
 
   return (
     <div className={s.container}>
       <Label.Root className={s.label_field} htmlFor="firstName">
-        First name
+        <Typography variant={'body_2'} as={'label'}>
+          First name
+        </Typography>
       </Label.Root>
       <div className={wrapperClassName} tabIndex={0}>
         <div
