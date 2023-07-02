@@ -52,7 +52,7 @@ export function App() {
       </div>
       <LoginForm />
       <div style={{ paddingLeft: '40%', paddingBottom: '250px', paddingTop: '250px' }}>
-        <CustomTabs tabs={['My Packs', 'All Packs']} />
+        <CustomTabs tabs={['My Packs', 'All Packs']} disabled={true} />
       </div>
     </div>
   )

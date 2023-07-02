@@ -30,18 +30,20 @@
         border-radius: 0 2px 2px 0;
       }
 
-      &:active {
-        background: var(--color-accent-500);
-      }
-
       &:hover {
         color: var(--color-light-900);
         background: var(--color-dark-500);
         border-color: var(--color-dark-100);
       }
 
-      & [data-state='active'] {
-        color: var(--color-light-100);
+      &[data-state='active'] {
+        background: var(--color-accent-500);
+        border-color: var(--color-accent-500);
+      }
+
+      &[data-disabled] {
+        background: var(--color-dark-700);
+        border-color: var(--color-dark-300);
       }
 
       &:focus-visible {
