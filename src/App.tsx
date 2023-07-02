@@ -9,6 +9,7 @@ import { AvatarDropdownMenu } from '@/components/ui/dropdown-menu'
 import { Header } from '@/components/ui/header'
 import { CustomSelect } from '@/components/ui/select'
 import { CustomSlider } from '@/components/ui/slider'
+import { CustomTabs } from '@/components/ui/switch'
 import { TextField } from '@/components/ui/tetx-field'
 import { Typography } from '@/components/ui/typography'
 
@@ -50,6 +51,9 @@ export function App() {
         <CustomSelect disabled={false} />
       </div>
       <LoginForm />
+      <div style={{ paddingLeft: '40%', paddingBottom: '250px', paddingTop: '250px' }}>
+        <CustomTabs tabs={['My Packs', 'All Packs']} />
+      </div>
     </div>
   )
 }

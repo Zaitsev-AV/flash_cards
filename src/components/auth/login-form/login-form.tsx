@@ -35,6 +35,7 @@ export const LoginForm: FC = () => {
     mode: 'onSubmit',
   })
 
+  // eslint-disable-next-line no-console
   const onSubmit = handleSubmit(data => console.log(data))
 
   const {} = useForm()
