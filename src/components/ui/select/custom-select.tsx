@@ -34,11 +34,7 @@ export const CustomSelect: FC<CustomSelectPropsType> = props => {
           <Select.Content className={s.content} position={'popper'} side={'bottom'} sideOffset={0}>
             <Select.Viewport>
               {items.map((el, i) => {
-                return (
-                  <SelectItem key={i} value={el}>
-                    <Typography variant={'body_1'}>{el}</Typography>
-                  </SelectItem>
-                )
+                return <SelectItem key={i} value={el} className={s.item} />
               })}
             </Select.Viewport>
           </Select.Content>
