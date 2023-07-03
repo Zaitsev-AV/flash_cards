@@ -48,7 +48,7 @@ export function App() {
         <CustomSlider />
       </div>
       <div style={{ paddingLeft: '50%', paddingBottom: '250px', width: '500px', height: '500px' }}>
-        <CustomSelect disabled={false} />
+        <CustomSelect items={['item_1', 'item_2', 'item_3', 'item_4', 'item_5']} />
       </div>
       <LoginForm />
       <div style={{ paddingLeft: '40%', paddingBottom: '250px', paddingTop: '250px' }}>

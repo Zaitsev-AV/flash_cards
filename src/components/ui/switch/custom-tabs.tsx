@@ -12,6 +12,7 @@ export type CustomTabsPropsType = {
   defaultValue?: number
   disabled?: boolean
 }
+//todo: add callback in onChangeValue
 
 export const CustomTabs: FC<CustomTabsPropsType> = props => {
   const { tabs, label, defaultValue = 1, disabled = false } = props
